@@ -1,0 +1,72 @@
+@use "../utilities/variables" as *;
+
+// ACCESIBILIDAD Y CONTRASTE
+
+// ENLACES DEL CONTENIDO PRINCIPAL
+
+main {
+
+    a:not(.btn) {
+
+        &:hover,
+        &:focus {
+            color: $color-primario-oscuro;
+        }
+    }
+}
+
+// BOTONES PRINCIPALES
+
+.btn-portfolio {
+
+    &:hover {
+        background-color: $color-primario-oscuro;
+        border-color: $color-primario-oscuro;
+        color: $color-blanco;
+    }
+}
+
+// NAVEGACIÓN
+
+.navbar-portfolio {
+
+    .navbar-brand {
+
+        &:hover {
+            color: $color-blanco;
+        }
+    }
+
+    .nav-link {
+
+        &.active,
+        &:hover,
+        &:active {
+            background-color: $color-primario-oscuro;
+            color: $color-blanco;
+        }
+    }
+}
+
+// CAROUSEL
+
+.carousel-portfolio {
+
+    .carousel-caption {
+        background-color: $color-primario-oscuro;
+        color: $color-blanco;
+    }
+}
+
+// FOOTER
+
+footer {
+
+    a {
+
+        &:hover {
+            color: $color-blanco;
+            text-decoration: underline;
+        }
+    }
+}

@@ -951,3 +951,30 @@ main h1 {
     animation: none;
   }
 }
+main a:not(.btn):hover, main a:not(.btn):focus {
+  color: #115e59;
+}
+
+.btn-portfolio:hover {
+  background-color: #115e59;
+  border-color: #115e59;
+  color: #ffffff;
+}
+
+.navbar-portfolio .navbar-brand:hover {
+  color: #ffffff;
+}
+.navbar-portfolio .nav-link.active, .navbar-portfolio .nav-link:hover, .navbar-portfolio .nav-link:active {
+  background-color: #115e59;
+  color: #ffffff;
+}
+
+.carousel-portfolio .carousel-caption {
+  background-color: #115e59;
+  color: #ffffff;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

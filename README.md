@@ -1,14 +1,14 @@
-# Portfolio - Animaciones y Responsive
+# Portfolio - SEO y Servidores
 
-Tercera pre-entrega correspondiente al **Módulo 8: Animaciones** del curso de **Desarrollo Web de Coderhouse**.
+Entrega correspondiente al Módulo 9: SEO, Dominios y Servidores del curso de Desarrollo Web de Coderhouse.
 
-Este proyecto continúa la evolución de mi portafolio personal desarrollado a lo largo de los módulos anteriores. En esta etapa se profundiza el uso de **SCSS**, se incorporan **animaciones nativas**, una **librería externa de animaciones** y se completa la **responsividad de las cinco páginas del sitio**.
+Este proyecto continúa la evolución del portfolio desarrollado en los módulos anteriores. En esta etapa se optimizó el sitio para mejorar su posicionamiento en buscadores, su semántica HTML y su accesibilidad.
 
 ---
 
 ## Descripción
 
-El proyecto consiste en un portafolio personal compuesto por cinco páginas HTML:
+El proyecto consiste en un portfolio personal compuesto por cinco páginas HTML:
 
 - Inicio
 - Sobre mí
@@ -16,21 +16,156 @@ El proyecto consiste en un portafolio personal compuesto por cinco páginas HTML
 - Servicios
 - Contacto
 
-El sitio fue desarrollado siguiendo una estrategia **Mobile First**, utilizando **media queries** para adaptar el contenido a dispositivos móviles, tablets y computadoras de escritorio.
+El sitio utiliza HTML5, CSS3, SCSS, Bootstrap, Flexbox, CSS Grid, Media Queries, animaciones nativas y AOS.
 
-Además, los estilos están organizados mediante una arquitectura SCSS basada en **partials**, utilizando herramientas avanzadas de SASS como:
+En el Módulo 9 se incorporaron optimizaciones relacionadas con SEO On-Page, SEO Técnico, accesibilidad, palabras clave y preparación para despliegue.
 
-- Variables
-- Nesting
-- Mixins con parámetros
-- `@extend`
-- Placeholders
-- Operadores
-- `@use`
-- Media Queries
-- Transiciones
-- Transformaciones
-- Animaciones con `@keyframes`
+---
+
+## SEO On-Page
+
+Se optimizaron los cinco documentos HTML mediante:
+
+- títulos específicos para cada página;
+- un único `h1` por documento;
+- jerarquía correcta de encabezados;
+- etiquetas HTML5 semánticas;
+- contenido relacionado con la intención de cada página;
+- palabras clave integradas de forma natural;
+- eliminación de textos excesivamente genéricos;
+- enlaces internos descriptivos.
+
+---
+
+## Meta description
+
+Cada documento incluye una etiqueta:
+
+```html
+<meta name="description" content="...">
+```
+
+La descripción fue redactada específicamente según el contenido de cada página.
+
+---
+
+## Keywords
+
+Cada documento posee keywords relacionadas con su contenido mediante:
+
+```html
+<meta name="keywords" content="...">
+```
+
+También se integraron palabras clave de forma natural dentro de títulos, encabezados y párrafos para evitar el uso excesivo de términos.
+
+Entre las principales keywords se encuentran:
+
+- portfolio desarrollo web
+- desarrollo web
+- desarrollo web Argentina
+- proyectos desarrollo web
+- servicios desarrollo web
+- HTML5
+- CSS3
+- SCSS
+- Bootstrap
+- diseño responsive
+
+---
+
+## SEO Local
+
+Las páginas principales, Servicios y Contacto incorporan referencias geográficas a Argentina para definir el área local relacionada con los servicios de desarrollo web.
+
+Las keywords locales se utilizan de forma natural, evitando repeticiones innecesarias.
+
+---
+
+## Accesibilidad
+
+Todas las imágenes poseen textos alternativos mediante el atributo `alt`.
+
+Ejemplo:
+
+```html
+<img
+    src="./img/espacio-trabajo-desarrollo-web.jpg"
+    alt="Computadora portátil en un espacio de trabajo utilizado para aprender y practicar desarrollo web">
+```
+
+También se revisó:
+
+- jerarquía de encabezados;
+- navegación mediante teclado;
+- atributos ARIA de Bootstrap;
+- contraste entre texto y fondo;
+- textos descriptivos para botones y enlaces.
+
+---
+
+## Contraste
+
+La paleta principal utiliza colores de fondo y texto que permiten mantener una correcta legibilidad.
+
+Se evitaron combinaciones de bajo contraste en:
+
+- botones;
+- enlaces;
+- navegación;
+- carousel;
+- estados hover y focus;
+- footer.
+
+Las correcciones específicas se encuentran en:
+
+```text
+scss/components/_accessibility.scss
+```
+
+---
+
+## Nombres de imágenes optimizados
+
+Los nombres genéricos fueron reemplazados por nombres descriptivos.
+
+Ejemplos:
+
+```text
+imagen-principal.jpg
+→ espacio-trabajo-desarrollo-web.jpg
+
+imagen-proyectos.jpg
+→ proyectos-desarrollo-web.jpg
+
+galeria-1.jpg
+→ diseno-web-responsive.jpg
+```
+
+Esto permite que los nombres de archivo aporten contexto adicional al contenido.
+
+---
+
+## SEO Técnico
+
+Se incorporaron:
+
+```text
+robots.txt
+sitemap.xml
+```
+
+`robots.txt` permite indicar a los motores de búsqueda qué contenido puede ser rastreado.
+
+`sitemap.xml` contiene las URLs principales del sitio para facilitar su descubrimiento e indexación.
+
+---
+
+## SEO Off-Page
+
+El portfolio se conecta con perfiles y repositorios públicos de GitHub.
+
+Como estrategia Off-Page, el sitio publicado puede enlazarse desde el perfil público de GitHub para generar una referencia externa hacia el portfolio.
 
 ---
 
@@ -38,7 +173,7 @@ Además, los estilos están organizados mediante una arquitectura SCSS basada en
 
 - HTML5
 - CSS3
-- SCSS / SASS
+- SCSS / Sass
 - Bootstrap 5.3
 - AOS - Animate On Scroll
 - CSS Grid
@@ -47,6 +182,7 @@ Además, los estilos están organizados mediante una arquitectura SCSS basada en
 - JavaScript
 - Git
 - GitHub
+- GitHub Pages
 - Node.js
 - npm
 
@@ -55,9 +191,11 @@ Además, los estilos están organizados mediante una arquitectura SCSS basada en
 ## Estructura del proyecto
 
 ```text
-portfolio-animaciones-responsive/
+portfolio-seo-servidores/
 │
 ├── index.html
+├── robots.txt
+├── sitemap.xml
 ├── package.json
 ├── package-lock.json
 ├── .gitignore
@@ -67,14 +205,14 @@ portfolio-animaciones-responsive/
 │   └── style.css
 │
 ├── img/
-│   ├── imagen-principal.jpg
-│   ├── imagen-sobre-mi.jpg
-│   ├── imagen-proyectos.jpg
-│   ├── imagen-servicios.jpg
-│   ├── imagen-contacto.jpg
-│   ├── galeria-1.jpg
-│   ├── galeria-2.jpg
-│   └── galeria-3.jpg
+│   ├── espacio-trabajo-desarrollo-web.jpg
+│   ├── formacion-desarrollo-web.jpg
+│   ├── proyectos-desarrollo-web.jpg
+│   ├── servicios-desarrollo-web.jpg
+│   ├── contacto-desarrollo-web.jpg
+│   ├── diseno-web-responsive.jpg
+│   ├── codigo-desarrollo-web.jpg
+│   └── planificacion-interfaz-web.jpg
 │
 ├── js/
 │   └── main.js
@@ -107,343 +245,27 @@ portfolio-animaciones-responsive/
         ├── _buttons.scss
         ├── _cards.scss
         ├── _components.scss
-        └── _animations.scss
+        ├── _animations.scss
+        └── _accessibility.scss
 ```
-
----
-
-## Arquitectura SCSS
-
-El proyecto utiliza una estructura de archivos organizada mediante **partials**.
-
-El archivo principal:
-
-```text
-scss/main.scss
-```
-
-se utiliza únicamente para importar los demás archivos utilizando `@use`.
-
-Ejemplo:
-
-```scss
-@use "utilities/variables";
-@use "utilities/mixins";
-@use "utilities/placeholders";
-
-@use "base/tipografia";
-@use "base/base";
-
-@use "layout/header";
-@use "layout/nav";
-@use "layout/layout";
-@use "layout/footer";
-
-@use "components/buttons";
-@use "components/cards";
-@use "components/components";
-@use "components/animations";
-```
-
-Esta organización permite mantener los estilos separados según su responsabilidad y facilita la lectura y mantenimiento del código.
-
----
-
-## Variables SCSS
-
-Se utilizan variables para centralizar valores reutilizados en todo el sitio, por ejemplo:
-
-- Colores
-- Tipografía
-- Espaciados
-- Radios de borde
-- Breakpoints
-- Duraciones de transiciones
-- Valores de transparencia
-
-También se utilizan operadores de SASS para generar valores a partir de otras variables.
-
-Ejemplo:
-
-```scss
-$espacio-20: 20px;
-$espacio-40: $espacio-20 * 2;
-```
-
----
-
-## Mixins con parámetros
-
-El proyecto utiliza mixins parametrizados para evitar repetir código.
-
-Entre ellos se encuentran mixins para:
-
-- Flexbox
-- CSS Grid
-- Cards
-- Transiciones
-- Estados de foco
-
-Ejemplo:
-
-```scss
-@mixin grid-columnas(
-    $columnas,
-    $gap: $espacio-20
-) {
-    display: grid;
-    grid-template-columns: repeat($columnas, 1fr);
-    gap: $gap;
-}
-```
-
-Esto permite reutilizar una misma estructura configurando distintos valores según cada componente.
-
----
-
-## Uso de `@extend`
-
-También se implementan placeholders reutilizables junto con `@extend`.
-
-Ejemplo:
-
-```scss
-%elemento-interactivo {
-    transition:
-        transform $duracion-media $easing-suave,
-        box-shadow $duracion-media $easing-suave,
-        border-color $duracion-media $easing-suave;
-}
-```
-
-Luego puede reutilizarse de esta forma:
-
-```scss
-.card-proyecto-bootstrap {
-    @extend %elemento-interactivo;
-}
-```
-
-De esta manera se evita duplicar estilos que son comunes entre distintos componentes.
-
----
-
-## Nesting
-
-SCSS permite organizar selectores relacionados dentro de un mismo bloque.
-
-El proyecto utiliza nesting especialmente en:
-
-- Navbar
-- Cards
-- Botones
-- Formularios
-- Accordion
-- Carousel
-- Modales
-- Footer
-
----
-
-## Animaciones nativas
-
-El proyecto implementa animaciones realizadas directamente desde SCSS mediante `transition`, `transform` y `@keyframes`.
-
-### Animación de entrada
-
-```scss
-@keyframes aparecer-suave {
-
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-```
-
-Esta animación se aplica a los títulos principales de las páginas.
-
-### Animación de pulso
-
-También se utiliza una animación sutil mediante:
-
-```scss
-@keyframes pulso-suave {
-
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.035);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-```
-
----
-
-## Transiciones y transformaciones
-
-Además de los `@keyframes`, se aplican transiciones en distintos componentes del sitio.
-
-Por ejemplo:
-
-- Botones
-- Navbar
-- Enlaces
-- Cards
-- Imágenes
-- Formularios
-- Carousel
-- Accordion
-
-Entre los efectos utilizados se encuentran:
-
-- `translateY()`
-- `scale()`
-- Cambios de color
-- Cambios de sombra
-- Cambios de borde
-
----
-
-## Librería externa de animaciones
-
-El proyecto utiliza **AOS - Animate On Scroll**.
-
-AOS permite ejecutar animaciones cuando los elementos ingresan al área visible de la pantalla durante el scroll.
-
-Se incorpora mediante CDN:
-
-```html
-<link
-    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-    rel="stylesheet">
-```
-
-y:
-
-```html
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-```
-
-Los elementos utilizan atributos como:
-
-```html
-data-aos="fade-up"
-```
-
-```html
-data-aos="fade-right"
-```
-
-```html
-data-aos="fade-left"
-```
-
-```html
-data-aos="zoom-in"
-```
-
-La configuración principal se encuentra en:
-
-```text
-js/main.js
-```
-
----
-
-## Responsividad
-
-El proyecto utiliza una estrategia **Mobile First**.
-
-Los estilos base están pensados para dispositivos móviles y posteriormente se modifica la distribución mediante Media Queries.
-
-Los principales breakpoints utilizados son:
-
-- 576px
-- 768px
-- 1024px
-
-El diseño se adapta progresivamente a:
-
-- Mobile
-- Tablet
-- Desktop
-
----
-
-## Responsividad de las cinco páginas
-
-La responsividad fue aplicada a todas las páginas del sitio.
-
-### Inicio
-
-En dispositivos pequeños el contenido se organiza principalmente en una sola columna.
-
-En pantallas más grandes se utilizan layouts de dos columnas y grids para aprovechar mejor el espacio disponible.
-
-### Sobre mí
-
-La información y la imagen se presentan apiladas en dispositivos pequeños y se reorganizan en desktop.
-
-### Proyectos
-
-Las tarjetas cambian su cantidad de columnas según el ancho disponible.
-
-### Servicios
-
-Las tarjetas de servicios pasan de una sola columna en dispositivos móviles a varias columnas en pantallas mayores.
-
-### Contacto
-
-El bloque de información y el formulario aparecen uno debajo del otro en mobile y pasan a dos columnas en desktop.
-
----
-
-## Bootstrap
-
-El proyecto utiliza Bootstrap 5.3 para diferentes componentes:
-
-- Navbar responsive
-- Grid
-- Cards
-- Carousel
-- Accordion
-- Modales
-- Formularios
-- Botones
-
-Los estilos propios definidos en SCSS complementan y personalizan estos componentes.
 
 ---
 
 ## Compilación de SCSS
 
-Para trabajar con el proyecto se debe tener instalado Node.js.
-
-Luego, desde la carpeta raíz del proyecto, instalar las dependencias:
+Instalar las dependencias:
 
 ```bash
 npm install
 ```
 
-Para compilar SCSS:
+Compilar SCSS:
 
 ```bash
 npm run sass
 ```
 
-Este comando compila:
+El comando compila:
 
 ```text
 scss/main.scss
@@ -457,62 +279,59 @@ css/style.css
 
 ---
 
-## Compilación automática
+## Despliegue
 
-Durante el desarrollo se puede utilizar:
+El sitio puede publicarse mediante GitHub Pages desde la rama `main`.
 
-```bash
-npm run sass:watch
-```
-
-Esto mantiene SASS observando los archivos SCSS y actualiza automáticamente el CSS ante cada modificación.
-
-Para detener el proceso:
+URL del sitio:
 
 ```text
-Ctrl + C
+https://silvajd.github.io/portfolio-seo-servidores/
 ```
 
 ---
 
 ## Objetivos cumplidos
 
-En esta tercera pre-entrega se implementaron los siguientes requisitos:
-
-- Arquitectura completa de partials SCSS.
-- Importación mediante `@use`.
-- Variables SCSS.
-- Nesting.
-- Mixins con parámetros.
-- Uso de `@extend`.
-- Placeholders.
-- Operadores SASS.
-- Animaciones nativas.
-- Transiciones.
-- Transformaciones.
-- Animaciones mediante `@keyframes`.
-- Librería externa AOS.
-- Responsividad mobile.
-- Responsividad tablet.
-- Responsividad desktop.
-- Responsividad en los cinco archivos HTML.
-- Bootstrap 5.3.
-- Repositorio Git con commits correspondientes a las distintas etapas del desarrollo.
+- SEO On-Page
+- Meta description en los cinco HTML
+- Meta keywords en los cinco HTML
+- Keywords específicas por página
+- SEO local
+- HTML5 semántico
+- Un único `h1` por página
+- Jerarquía correcta de títulos
+- Textos alternativos en todas las imágenes
+- Nombres descriptivos de imágenes
+- Contraste accesible
+- SEO Técnico
+- robots.txt
+- sitemap.xml
+- Preparación para SEO Off-Page
+- Diseño responsive
+- SCSS
+- Bootstrap
+- Animaciones
+- Repositorio público en GitHub
 
 ---
 
 ## Repositorio
 
-El proyecto se encuentra disponible públicamente en GitHub:
+El proyecto se encuentra disponible públicamente en:
 
-**https://github.com/silvajd/portfolio-animaciones-responsive**
+```text
+https://github.com/silvajd/portfolio-seo-servidores
+```
 
 ---
 
 ## Autor
 
-**Josefina Silva**
+Josefina Silva
 
 GitHub:
 
-**https://github.com/silvajd**
+```text
+https://github.com/silvajd
+```

@@ -1,0 +1,17 @@
+@use "variables" as *;
+
+// ELEMENTOS INTERACTIVOS
+
+%elemento-interactivo {
+    transition:
+        transform $duracion-media $easing-suave,
+        box-shadow $duracion-media $easing-suave,
+        border-color $duracion-media $easing-suave;
+}
+
+// SUPERFICIES BLANCAS
+
+%superficie-blanca {
+    background-color: $color-blanco;
+    border-radius: $radio-general;
+}

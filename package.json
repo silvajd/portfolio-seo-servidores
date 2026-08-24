@@ -1,0 +1,32 @@
+{
+  "name": "portfolio-animaciones-responsive",
+  "version": "1.0.0",
+  "description": "Tercera pre-entrega de Desarrollo Web: SCSS avanzado, animaciones y diseño responsive.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss/main.scss css/style.css --style=expanded --no-source-map",
+    "sass:watch": "sass --watch scss/main.scss:css/style.css --style=expanded --no-source-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvajd/portfolio-animaciones-responsive.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "scss",
+    "sass",
+    "responsive",
+    "animaciones"
+  ],
+  "author": "Josefina Silva",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/silvajd/portfolio-animaciones-responsive/issues"
+  },
+  "homepage": "https://github.com/silvajd/portfolio-animaciones-responsive#readme",
+  "devDependencies": {
+    "sass": "^1.103.1"
+  }
+}

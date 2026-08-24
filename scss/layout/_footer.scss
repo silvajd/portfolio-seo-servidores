@@ -1,0 +1,56 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// FOOTER
+
+footer {
+    margin-top: $espacio-30;
+    padding: $espacio-20;
+
+    background-color: $color-primario-oscuro;
+
+    color: $color-blanco;
+
+    text-align: center;
+
+
+    p {
+        margin-bottom: $espacio-10;
+    }
+
+
+    a {
+        display: inline-block;
+
+        color: $color-blanco;
+
+        text-decoration: none;
+
+        transition:
+            color 0.3s ease,
+            transform 0.2s ease;
+
+
+        &:hover {
+            color: $color-acento-claro;
+
+            transform: translateY(-2px);
+        }
+
+
+        &:focus {
+            color: $color-blanco;
+
+            @include focus-outline;
+
+            border-radius: $radio-pequeno;
+        }
+
+
+        &:active {
+            color: $color-borde;
+
+            transform: scale(0.96);
+        }
+    }
+}

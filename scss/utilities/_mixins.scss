@@ -1,0 +1,66 @@
+@use "variables" as *;
+
+// FOCO ACCESIBLE
+
+@mixin focus-outline($color: $color-acento,
+    $offset: 3px,
+    $grosor: 3px) {
+    outline: $grosor solid $color;
+    outline-offset: $offset;
+}
+
+// GRID MOBILE FIRST
+
+@mixin grid-mobile($gap: $espacio-30) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $gap;
+}
+
+// GRID CON PARÁMETROS
+
+@mixin grid-columnas($columnas,
+    $gap: $espacio-20) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $gap;
+}
+
+// FLEXBOX CON PARÁMETROS
+
+@mixin flex-layout($direccion: row,
+    $justify: flex-start,
+    $align: stretch,
+    $gap: 0) {
+    display: flex;
+    flex-direction: $direccion;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+// BASE PARA CARDS
+
+@mixin card-base($color-superior,
+    $sombra: $primario-10) {
+    padding: 0;
+
+    background-color: $color-blanco;
+
+    border: 2px solid $color-borde;
+    border-top: 4px solid $color-superior;
+
+    border-radius: $radio-general;
+
+    box-shadow: 0 4px 12px $sombra;
+}
+
+// TRANSICIÓN INTERACTIVA
+
+@mixin transicion-interactiva($duracion: $duracion-media,
+    $timing: $easing-suave) {
+    transition:
+        transform $duracion $timing,
+        box-shadow $duracion $timing,
+        border-color $duracion $timing;
+}

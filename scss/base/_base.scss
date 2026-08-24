@@ -1,0 +1,134 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// RESET Y BOX MODEL
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+// HTML
+
+html {
+    scroll-behavior: smooth;
+}
+
+// BODY
+
+body {
+    min-height: 100vh;
+
+    font-family: $fuente-principal;
+
+    background-color: $color-fondo;
+    color: $color-texto;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+}
+
+// IMÁGENES
+
+img {
+    display: block;
+
+    max-width: 100%;
+}
+
+// CONTENIDO PRINCIPAL
+
+main {
+    width: 100%;
+    max-width: $ancho-maximo;
+
+    margin: 0 auto;
+    padding: $espacio-20;
+
+    flex: 1;
+
+
+    a:not(.btn) {
+        color: $color-primario;
+
+        font-weight: 700;
+
+        text-decoration: none;
+
+        transition:
+            color $duracion-media ease,
+            transform $duracion-rapida ease;
+
+
+        &:hover {
+            color: $color-acento;
+
+            text-decoration: underline;
+        }
+
+
+        &:focus {
+            color: $color-acento;
+
+            @include focus-outline;
+
+            border-radius: $radio-pequeno;
+        }
+
+
+        &:active {
+            color: $color-primario-oscuro;
+        }
+    }
+
+
+    a.btn-portfolio {
+        color: $color-blanco;
+
+        text-decoration: none;
+    }
+}
+
+// SECCIONES
+
+section {
+    width: 100%;
+
+    background-color: $color-blanco;
+
+    padding: $espacio-20;
+
+    border-radius: $radio-general;
+}
+
+// ARTÍCULOS
+
+article {
+    background-color: $color-superficie-suave;
+
+    padding: $espacio-20;
+
+    border-radius: $radio-articulo;
+}
+
+// TABLET
+
+@media (min-width: $breakpoint-tablet) {
+
+    section {
+        padding: $espacio-25;
+    }
+}
+
+// DESKTOP
+
+@media (min-width: $breakpoint-desktop) {
+
+    main {
+        padding: $espacio-30;
+    }
+}

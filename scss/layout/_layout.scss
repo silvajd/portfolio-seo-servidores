@@ -1,0 +1,465 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// INDEX - MOBILE FIRST
+
+.inicio-grid {
+    @include grid-mobile;
+
+    grid-template-areas:
+        "presentacion"
+        "sobre-mi"
+        "proyectos"
+        "galeria"
+        "informacion";
+}
+
+
+.inicio-presentacion {
+    grid-area: presentacion;
+}
+
+
+.inicio-sobre-mi {
+    grid-area: sobre-mi;
+}
+
+
+.proyectos-destacados {
+    grid-area: proyectos;
+}
+
+
+.galeria-bootstrap {
+    grid-area: galeria;
+}
+
+
+.informacion-bootstrap {
+    grid-area: informacion;
+}
+
+// PRESENTACIONES
+
+.presentacion,
+.presentacion-proyectos {
+    @include flex-layout(column,
+        flex-start,
+        stretch,
+        $espacio-25 );
+
+
+    >div {
+        flex: 1;
+
+        min-width: 0;
+    }
+}
+
+// IMÁGENES
+
+.presentacion-imagen,
+.imagen-pagina,
+.imagen-proyectos {
+    flex: 1;
+
+    min-width: 0;
+
+    margin: 0;
+
+
+    img {
+        width: 100%;
+        height: auto;
+
+        border-radius: $radio-general;
+
+        object-fit: cover;
+
+        transition:
+            transform $duracion-lenta ease,
+            box-shadow $duracion-media ease;
+
+
+        &:hover {
+            transform: scale(1.02);
+
+            box-shadow: 0 10px 24px $primario-18;
+        }
+    }
+
+
+    figcaption {
+        margin-top: $espacio-10;
+
+        color: $color-texto-secundario;
+
+        font-size: $tamano-caption;
+
+        text-align: center;
+    }
+}
+
+// SOBRE MÍ
+
+.sobre-mi {
+    @include flex-layout(column,
+        flex-start,
+        stretch,
+        $espacio-20 );
+
+
+    >div {
+        flex: 1;
+
+        min-width: 0;
+    }
+}
+
+
+.pagina-sobre-mi {
+    @include grid-mobile;
+
+    grid-template-areas:
+        "presentacion"
+        "intereses"
+        "objetivos"
+        "experiencia";
+}
+
+
+.area-sobre-presentacion {
+    grid-area: presentacion;
+}
+
+
+.area-sobre-intereses {
+    grid-area: intereses;
+}
+
+
+.area-sobre-objetivos {
+    grid-area: objetivos;
+}
+
+
+.area-sobre-experiencia {
+    grid-area: experiencia;
+}
+
+// PROYECTOS DEL INDEX
+
+.proyectos {
+    margin-top: $espacio-20;
+}
+
+
+.proyectos-inicio {
+    @include grid-mobile($espacio-20);
+
+    margin: $espacio-20 0;
+}
+
+// PÁGINA PROYECTOS
+
+.pagina-proyectos {
+    @include grid-mobile;
+
+    grid-template-areas:
+        "introduccion"
+        "proyectos"
+        "herramientas";
+}
+
+
+.area-introduccion {
+    grid-area: introduccion;
+}
+
+
+.area-proyectos {
+    grid-area: proyectos;
+}
+
+
+.area-herramientas {
+    grid-area: herramientas;
+}
+
+
+.herramientas-contenedor {
+    @include grid-mobile($espacio-20);
+
+    margin-top: $espacio-20;
+}
+
+// PÁGINA SERVICIOS
+
+.pagina-servicios {
+    @include grid-mobile;
+
+    grid-template-areas:
+        "presentacion"
+        "servicios"
+        "metodologia"
+        "contacto";
+}
+
+
+.area-servicios-presentacion {
+    grid-area: presentacion;
+}
+
+
+.area-servicios-listado {
+    grid-area: servicios;
+}
+
+
+.area-servicios-metodologia {
+    grid-area: metodologia;
+}
+
+
+.area-servicios-contacto {
+    grid-area: contacto;
+}
+
+
+.metodologia-contenedor {
+    @include grid-mobile($espacio-20);
+
+    margin-top: $espacio-20;
+}
+
+// PÁGINA CONTACTO
+
+.pagina-contacto {
+    @include grid-mobile;
+
+    grid-template-areas:
+        "presentacion"
+        "contenido"
+        "final";
+}
+
+
+.area-contacto-presentacion {
+    grid-area: presentacion;
+}
+
+
+.area-contacto-contenido {
+    grid-area: contenido;
+}
+
+
+.area-contacto-final {
+    grid-area: final;
+}
+
+// MOBILE PEQUEÑO - HASTA 576px
+
+@media (max-width: $breakpoint-mobile) {
+
+    main {
+        padding: $espacio-15;
+    }
+
+
+    section {
+        padding: $espacio-20;
+    }
+
+
+    .btn-portfolio {
+        width: 100%;
+    }
+
+
+    .presentacion,
+    .presentacion-proyectos,
+    .sobre-mi {
+        gap: $espacio-20;
+    }
+}
+
+// TABLET - DESDE 768px
+
+@media (min-width: $breakpoint-tablet) {
+
+    main {
+        padding: $espacio-25;
+    }
+
+    // INDEX
+
+    .proyectos-inicio {
+        @include grid-columnas(2,
+            $espacio-20 );
+    }
+
+    // SOBRE MÍ
+
+    .pagina-sobre-mi {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas:
+            "presentacion presentacion"
+            "intereses objetivos"
+            "experiencia experiencia";
+    }
+
+    // PROYECTOS
+
+    .herramientas-contenedor {
+        @include grid-columnas(2,
+            $espacio-20 );
+    }
+
+    // SERVICIOS
+
+    .metodologia-contenedor {
+        @include grid-columnas(2,
+            $espacio-20 );
+    }
+}
+
+
+// DESKTOP - DESDE 1024px
+
+@media (min-width: $breakpoint-desktop) {
+
+    main {
+        padding: $espacio-30;
+    }
+
+    // INDEX
+
+    .inicio-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas:
+            "presentacion presentacion"
+            "sobre-mi proyectos"
+            "galeria galeria"
+            "informacion informacion";
+
+        gap: $espacio-40;
+    }
+
+
+    .presentacion {
+        flex-direction: row;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .proyectos-inicio {
+        @include grid-columnas(4,
+            $espacio-20 );
+    }
+
+    // SOBRE MÍ
+
+    .pagina-sobre-mi {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas:
+            "presentacion presentacion"
+            "intereses objetivos"
+            "experiencia experiencia";
+
+        gap: $espacio-30;
+
+
+        .sobre-mi {
+            flex-direction: row;
+
+            align-items: center;
+
+            gap: $espacio-30;
+        }
+    }
+
+    // PROYECTOS
+
+    .pagina-proyectos {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas:
+            "introduccion introduccion"
+            "proyectos proyectos"
+            "herramientas herramientas";
+
+        gap: $espacio-30;
+    }
+
+
+    .presentacion-proyectos {
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: $espacio-30;
+    }
+
+
+    .herramientas-contenedor {
+        @include grid-columnas(3,
+            $espacio-20 );
+    }
+
+    // SERVICIOS
+
+    .pagina-servicios {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas:
+            "presentacion presentacion"
+            "servicios servicios"
+            "metodologia metodologia"
+            "contacto contacto";
+
+        gap: $espacio-30;
+
+
+        .sobre-mi {
+            flex-direction: row;
+
+            align-items: center;
+
+            gap: $espacio-30;
+        }
+    }
+
+
+    .metodologia-contenedor {
+        @include grid-columnas(3,
+            $espacio-20 );
+    }
+
+    // CONTACTO
+
+    .pagina-contacto {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas:
+            "presentacion presentacion"
+            "contenido contenido"
+            "final final";
+
+        gap: $espacio-30;
+
+
+        .sobre-mi {
+            flex-direction: row;
+
+            align-items: center;
+
+            gap: $espacio-30;
+        }
+    }
+}

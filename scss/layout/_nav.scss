@@ -1,0 +1,152 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// NAVBAR BOOTSTRAP
+
+.navbar-portfolio {
+    width: 100%;
+
+    background-color: $color-primario;
+
+    padding: $espacio-12 0;
+
+
+    .container {
+        max-width: $ancho-maximo;
+    }
+
+
+    .navbar-brand {
+        color: $color-blanco;
+
+        font-size: 24px;
+        font-weight: 700;
+
+        text-decoration: none;
+
+        transition:
+            color 0.3s ease,
+            transform 0.3s ease;
+
+
+        &:hover {
+            color: $color-acento-claro;
+
+            transform: translateY(-2px);
+        }
+
+
+        &:focus {
+            color: $color-blanco;
+
+            @include focus-outline;
+
+            border-radius: $radio-nav;
+        }
+
+
+        &:active {
+            color: $color-acento-claro;
+
+            transform: scale(0.96);
+        }
+    }
+
+
+    .nav-link {
+        color: $color-blanco;
+
+        font-size: 16px;
+        font-weight: 600;
+
+        padding: $espacio-8 $espacio-10;
+
+        border-radius: $radio-nav;
+
+        transition:
+            color 0.3s ease,
+            background-color 0.3s ease,
+            transform 0.3s ease;
+
+
+        &.active {
+            color: $color-acento-claro;
+
+            font-weight: 700;
+        }
+
+
+        &:hover {
+            color: $color-acento-claro;
+
+            background-color: $blanco-10;
+
+            transform: translateY(-2px);
+        }
+
+
+        &:focus {
+            color: $color-blanco;
+
+            background-color: $blanco-10;
+
+            @include focus-outline($color-acento, 2px);
+        }
+
+
+        &:active {
+            color: $color-blanco;
+
+            background-color: $color-acento;
+
+            transform: scale(0.96);
+        }
+    }
+
+
+    .navbar-toggler {
+        border-color: $blanco-60;
+
+        transition:
+            background-color 0.3s ease,
+            border-color 0.3s ease,
+            box-shadow 0.3s ease,
+            transform 0.2s ease;
+
+
+        &:hover {
+            background-color: $blanco-12;
+
+            border-color: $color-blanco;
+        }
+
+
+        &:focus {
+            box-shadow: 0 0 0 3px $acento-45;
+        }
+
+
+        &:active {
+            transform: scale(0.94);
+        }
+    }
+}
+
+// NAVBAR MOBILE / TABLET
+
+@media (max-width: $breakpoint-navbar) {
+
+    .navbar-portfolio {
+
+        .navbar-nav {
+            padding-top: $espacio-15;
+
+            gap: $espacio-4;
+        }
+
+
+        .nav-link {
+            padding: $espacio-10;
+        }
+    }
+}

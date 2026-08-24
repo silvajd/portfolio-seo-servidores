@@ -1,0 +1,52 @@
+@use "../utilities/variables" as *;
+
+// TÍTULOS
+
+h1,
+h2,
+h3,
+h4 {
+    color: $color-primario-oscuro;
+}
+
+
+h1,
+h2,
+h3 {
+    margin-bottom: $espacio-15;
+}
+
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+
+    line-height: 1.15;
+}
+
+
+h2 {
+    font-size: clamp(1.45rem, 3.5vw, 2rem);
+}
+
+
+h3 {
+    font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+}
+
+
+h4 {
+    margin-bottom: $espacio-10;
+
+    font-size: $tamano-contacto;
+}
+
+// PÁRRAFOS
+
+p {
+    line-height: 1.6;
+}
+
+
+p+p {
+    margin-top: $espacio-10;
+}

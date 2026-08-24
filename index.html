@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inicio | Mi Portafolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS compilado desde SCSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-portfolio">
+
+            <div class="container">
+
+                <a class="navbar-brand" href="./index.html">
+                    Mi Portafolio
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPortfolio"
+                    aria-controls="navbarPortfolio" aria-expanded="false" aria-label="Abrir menú de navegación">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarPortfolio">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/sobre-mi.html">
+                                Sobre mí
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/proyectos.html">
+                                Proyectos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/servicios.html">
+                                Servicios
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">
+                                Contacto
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main class="inicio-grid">
+
+        <!-- PRESENTACIÓN -->
+
+        <section class="presentacion inicio-presentacion" data-aos="fade-up">
+
+            <div>
+
+                <h1>
+                    Mi Portafolio Profesional
+                </h1>
+
+                <p>
+                    Bienvenido a mi sitio web personal. En este espacio presento
+                    información sobre mí, mis conocimientos, proyectos y servicios
+                    relacionados con el desarrollo web.
+                </p>
+
+                <p>
+                    Este sitio forma parte de mi proceso de aprendizaje y evoluciona
+                    a medida que incorporo nuevas herramientas y técnicas de
+                    desarrollo.
+                </p>
+
+                <a class="btn btn-portfolio animacion-pulso" href="./pages/proyectos.html">
+                    Ver mis proyectos
+                </a>
+
+            </div>
+
+
+            <figure class="presentacion-imagen">
+
+                <img src="./img/imagen-principal.jpg" alt="Espacio de trabajo utilizado para aprender desarrollo web">
+
+                <figcaption>
+                    Mi espacio de aprendizaje y desarrollo.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- SOBRE MÍ -->
+
+        <section class="sobre-mi inicio-sobre-mi" data-aos="fade-right">
+
+            <div>
+
+                <h2>Sobre mí</h2>
+
+                <p>
+                    Me interesa el área de la tecnología y el desarrollo de software.
+                    Actualmente continúo incorporando conocimientos relacionados con
+                    HTML, CSS, SCSS y distintas herramientas utilizadas para construir
+                    sitios web.
+                </p>
+
+                <p>
+                    Mi objetivo es seguir desarrollando proyectos que me permitan
+                    aplicar los conocimientos adquiridos y mejorar progresivamente
+                    mis habilidades.
+                </p>
+
+                <a class="btn btn-portfolio" href="./pages/sobre-mi.html">
+                    Conocer más sobre mí
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROYECTOS DESTACADOS -->
+
+        <section class="proyectos-destacados proyectos" data-aos="fade-left">
+
+            <h2>Proyectos destacados</h2>
+
+            <p>
+                Algunos de los proyectos realizados durante las distintas etapas
+                del curso de Desarrollo Web.
+            </p>
+
+            <div class="proyectos-inicio">
+
+                <article>
+
+                    <h3>Proyecto HTML</h3>
+
+                    <p>
+                        Primera versión del sitio desarrollada utilizando HTML5
+                        semántico y una estructura organizada.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>Proyecto CSS</h3>
+
+                    <p>
+                        Incorporación de colores, tipografías, fondos y estilos
+                        propios para construir una identidad visual.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>Proyecto Flexbox</h3>
+
+                    <p>
+                        Aplicación de Box Model y Flexbox para organizar el
+                        contenido y construir layouts flexibles.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>Proyecto SCSS</h3>
+
+                    <p>
+                        Migración de los estilos a SCSS utilizando variables,
+                        mixins, nesting y una arquitectura basada en partials.
+                    </p>
+
+                </article>
+
+            </div>
+
+            <a class="btn btn-portfolio" href="./pages/proyectos.html">
+                Ver todos los proyectos
+            </a>
+
+        </section>
+
+
+        <!-- GALERÍA -->
+
+        <section class="galeria-bootstrap" data-aos="zoom-in">
+
+            <h2>Galería</h2>
+
+            <p>
+                Una selección de imágenes que representan mi proceso de
+                aprendizaje, diseño y desarrollo web.
+            </p>
+
+
+            <div id="carouselPortfolio" class="carousel slide carousel-fade carousel-portfolio" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+
+                    <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Imagen 1">
+                    </button>
+
+                    <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="1"
+                        aria-label="Imagen 2">
+                    </button>
+
+                    <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="2"
+                        aria-label="Imagen 3">
+                    </button>
+
+                </div>
+
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+
+                        <img src="./img/galeria-1.jpg" class="d-block w-100"
+                            alt="Computadora portátil mostrando un proyecto web en un espacio de trabajo">
+
+                        <div class="carousel-caption">
+
+                            <h3>Diseño web</h3>
+
+                            <p>
+                                Creación de interfaces organizadas, claras y
+                                visualmente coherentes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="carousel-item">
+
+                        <img src="./img/galeria-2.jpg" class="d-block w-100"
+                            alt="Computadora portátil mostrando código y una página web en desarrollo">
+
+                        <div class="carousel-caption">
+
+                            <h3>Desarrollo</h3>
+
+                            <p>
+                                Aplicación de HTML, CSS, SCSS y diferentes
+                                herramientas para construir sitios web.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="carousel-item">
+
+                        <img src="./img/galeria-3.jpg" class="d-block w-100"
+                            alt="Espacio de trabajo con computadora y bocetos de una interfaz web">
+
+                        <div class="carousel-caption">
+
+                            <h3>Planificación</h3>
+
+                            <p>
+                                Organización de ideas y estructuras antes de
+                                comenzar el desarrollo de una interfaz.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselPortfolio"
+                    data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon" aria-hidden="true">
+                    </span>
+
+                    <span class="visually-hidden">
+                        Anterior
+                    </span>
+
+                </button>
+
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselPortfolio"
+                    data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon" aria-hidden="true">
+                    </span>
+
+                    <span class="visually-hidden">
+                        Siguiente
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACCORDION -->
+
+        <section class="informacion-bootstrap" data-aos="fade-up">
+
+            <h2>Más sobre mi trabajo</h2>
+
+            <p>
+                En esta sección podés conocer algunos de los aspectos que tengo
+                en cuenta al desarrollar mis proyectos web.
+            </p>
+
+
+            <div class="accordion accordion-portfolio" id="accordionPortfolio">
+
+                <div class="accordion-item">
+
+                    <h3 class="accordion-header">
+
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#accordionDiseno" aria-expanded="true" aria-controls="accordionDiseno">
+
+                            Diseño responsivo
+
+                        </button>
+
+                    </h3>
+
+
+                    <div id="accordionDiseno" class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionPortfolio">
+
+                        <div class="accordion-body">
+
+                            <p>
+                                Desarrollo estructuras que puedan adaptarse a
+                                diferentes tamaños de pantalla utilizando
+                                Flexbox, CSS Grid, Media Queries y Bootstrap.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="accordion-item">
+
+                    <h3 class="accordion-header">
+
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#accordionOrganizacion" aria-expanded="false"
+                            aria-controls="accordionOrganizacion">
+
+                            Organización del contenido
+
+                        </button>
+
+                    </h3>
+
+
+                    <div id="accordionOrganizacion" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionPortfolio">
+
+                        <div class="accordion-body">
+
+                            <p>
+                                Utilizo HTML semántico para organizar correctamente
+                                cada sección y mantener una estructura clara.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="accordion-item">
+
+                    <h3 class="accordion-header">
+
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#accordionScss" aria-expanded="false" aria-controls="accordionScss">
+
+                            SCSS y animaciones
+
+                        </button>
+
+                    </h3>
+
+
+                    <div id="accordionScss" class="accordion-collapse collapse" data-bs-parent="#accordionPortfolio">
+
+                        <div class="accordion-body">
+
+                            <p>
+                                El proyecto utiliza SCSS organizado mediante
+                                partials, variables, mixins, extend, nesting,
+                                animaciones nativas y la librería AOS.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 Mi Portafolio. Todos los derechos reservados.
+        </p>
+
+        <div>
+
+            <a href="https://github.com/silvajd" target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- AOS JS -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    </script>
+
+
+    <!-- JavaScript propio -->
+
+    <script src="./js/main.js">
+    </script>
+
+</body>
+
+</html>

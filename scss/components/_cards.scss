@@ -1,0 +1,106 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/placeholders" as *;
+
+// PROYECTOS
+
+.proyectos-bootstrap {
+
+    >p {
+        margin-bottom: $espacio-10;
+    }
+}
+
+// CARD DE PROYECTO
+
+.card-proyecto-bootstrap {
+    @extend %elemento-interactivo;
+
+    @include card-base($color-acento,
+        $primario-10 );
+
+    &:hover {
+        border-color: $color-acento;
+
+        transform: translateY(-8px);
+
+        box-shadow: 0 12px 24px $primario-22;
+    }
+
+    &:focus {
+        border-color: $color-acento;
+
+        outline: 3px solid $acento-35;
+        outline-offset: 3px;
+
+        transform: translateY(-4px);
+    }
+
+    &:active {
+        transform: translateY(-2px) scale(0.98);
+
+        box-shadow: 0 6px 14px $primario-18;
+    }
+
+    .card-body {
+        padding: $espacio-24;
+    }
+
+    .card-title {
+        color: $color-primario-oscuro;
+    }
+
+    .card-text {
+        margin-bottom: $espacio-20;
+
+        color: $color-texto;
+
+        line-height: 1.6;
+    }
+}
+
+// CARD DE SERVICIO
+
+.card-servicio-bootstrap {
+    @extend %elemento-interactivo;
+
+    @include card-base($color-primario,
+        $primario-10 );
+
+    &:hover {
+        border-color: $color-acento;
+
+        transform: translateY(-7px);
+
+        box-shadow: 0 12px 24px $primario-20;
+    }
+
+    &:focus {
+        border-color: $color-acento;
+
+        outline: 3px solid $acento-35;
+        outline-offset: 3px;
+
+        transform: translateY(-4px);
+    }
+
+    &:active {
+        transform: translateY(-2px) scale(0.98);
+    }
+
+    .card-body {
+        padding: $espacio-24;
+    }
+
+    .card-title {
+        color: $color-primario-oscuro;
+    }
+
+    .card-text {
+        margin-bottom: $espacio-20;
+
+        color: $color-texto;
+
+        line-height: 1.6;
+    }
+}

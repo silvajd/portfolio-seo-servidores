@@ -1,0 +1,439 @@
+@use "../utilities/variables" as *;
+
+// DESTACADO
+
+.destacado {
+    min-height: 150px;
+
+    padding: $espacio-20;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-superficie-suave;
+
+    border-left: 6px solid $color-acento;
+    border-radius: $radio-articulo;
+
+    color: $color-primario-oscuro;
+
+    font-size: $tamano-destacado;
+    font-weight: bold;
+    text-align: center;
+}
+
+// PROYECTOS DEL INDEX
+
+.proyectos {
+
+    article {
+        min-height: 170px;
+
+        border-top: 4px solid $color-acento;
+    }
+}
+
+// GALERÍA
+
+.galeria-bootstrap {
+
+    >p {
+        margin-bottom: $espacio-25;
+    }
+}
+
+
+.carousel-portfolio {
+    overflow: hidden;
+
+    border-radius: $radio-carousel;
+
+    box-shadow: 0 8px 20px $primario-18;
+
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+
+
+    &:hover {
+        box-shadow: 0 12px 28px $primario-28;
+    }
+
+
+    &:focus-within {
+        box-shadow:
+            0 0 0 4px $acento-25,
+            0 12px 28px $primario-22;
+    }
+
+
+    &:active {
+        transform: scale(0.995);
+    }
+
+
+    .carousel-item {
+
+        img {
+            display: block;
+
+            width: 100%;
+
+            aspect-ratio: 16 / 9;
+
+            object-fit: cover;
+        }
+    }
+
+
+    .carousel-caption {
+        left: 10%;
+        right: 10%;
+        bottom: $espacio-25;
+
+        padding: $espacio-15 $espacio-20;
+
+        background-color: $primario-82;
+
+        border-radius: $radio-articulo;
+
+
+        h3 {
+            margin-bottom: $espacio-8;
+
+            color: $color-blanco;
+        }
+
+
+        p {
+            margin: 0;
+
+            color: $color-blanco;
+        }
+    }
+
+
+    .carousel-indicators {
+
+        button {
+            width: 35px;
+            height: 4px;
+
+            transition:
+                opacity 0.3s ease,
+                transform 0.2s ease;
+
+
+            &:hover {
+                opacity: 1;
+
+                transform: scaleX(1.15);
+            }
+
+
+            &:focus {
+                outline: 3px solid $color-acento;
+                outline-offset: 3px;
+            }
+
+
+            &:active {
+                transform: scaleX(0.9);
+            }
+        }
+    }
+}
+
+// CONTROLES DEL CAROUSEL
+
+.carousel-control-prev,
+.carousel-control-next {
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+
+
+    &:hover {
+        background-color: $acento-15;
+    }
+
+
+    &:focus {
+        outline: 3px solid $color-acento;
+        outline-offset: -5px;
+    }
+
+
+    &:active {
+        transform: scale(0.92);
+    }
+}
+
+// ACCORDION
+
+.informacion-bootstrap {
+
+    >p {
+        margin-bottom: $espacio-25;
+    }
+}
+
+
+.accordion-portfolio {
+    --bs-accordion-border-color: #{$color-borde};
+    --bs-accordion-active-color: #{$color-primario-oscuro};
+    --bs-accordion-active-bg: #{$color-superficie-suave};
+
+
+    .accordion-item {
+        overflow: hidden;
+
+        background-color: $color-blanco;
+
+        border-color: $color-borde;
+    }
+
+
+    .accordion-button {
+        color: $color-texto;
+
+        background-color: $color-blanco;
+
+        font-family: $fuente-principal;
+        font-weight: 700;
+
+        transition:
+            color 0.3s ease,
+            background-color 0.3s ease,
+            box-shadow 0.3s ease,
+            transform 0.2s ease;
+
+
+        &:not(.collapsed) {
+            color: $color-primario-oscuro;
+
+            background-color: $color-superficie-suave;
+
+            box-shadow: none;
+        }
+
+
+        &:hover {
+            color: $color-primario;
+
+            background-color: $color-fondo;
+        }
+
+
+        &:focus {
+            border-color: $color-acento;
+
+            box-shadow: 0 0 0 3px $acento-25;
+        }
+
+
+        &:active {
+            background-color: $color-borde;
+
+            transform: scale(0.995);
+        }
+    }
+
+
+    .accordion-body {
+        background-color: $color-fondo;
+
+        color: $color-texto;
+
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+// MODALS
+
+.modal-portfolio {
+    overflow: hidden;
+
+    border: 2px solid $color-borde;
+
+    border-radius: $radio-general;
+
+
+    .modal-header {
+        background-color: $color-fondo;
+
+        border-bottom-color: $color-borde;
+    }
+
+
+    .modal-title {
+        margin: 0;
+
+        color: $color-primario-oscuro;
+
+        font-weight: 700;
+    }
+
+
+    .modal-body {
+        color: $color-texto;
+
+
+        p {
+            margin: 0;
+        }
+    }
+
+
+    .modal-footer {
+        background-color: $color-modal-footer;
+
+        border-top-color: $color-borde;
+    }
+}
+
+// HERRAMIENTAS
+
+.herramientas-contenedor {
+
+    article {
+        border-left: 5px solid $color-acento;
+    }
+}
+
+// METODOLOGÍA
+
+.metodologia-contenedor {
+
+    article {
+        border-left: 5px solid $color-acento;
+
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+
+
+        &:hover {
+            transform: translateY(-4px);
+
+            box-shadow: 0 6px 14px $primario-14;
+        }
+    }
+}
+
+// INFORMACIÓN DE CONTACTO
+
+.contacto-info {
+    background-color: $color-superficie-suave;
+
+    border-left: 5px solid $color-acento;
+
+    padding: $espacio-25;
+
+    border-radius: $radio-general;
+}
+
+
+.contacto-dato {
+    margin-top: $espacio-25;
+    padding-top: $espacio-20;
+
+    border-top: 1px solid $color-borde;
+
+
+    &:first-of-type {
+        margin-top: $espacio-15;
+    }
+
+
+    h4 {
+        margin-bottom: $espacio-10;
+
+        color: $color-primario-oscuro;
+
+        font-size: $tamano-contacto;
+    }
+}
+
+// FORMULARIO DE CONTACTO
+
+.contacto-formulario {
+    background-color: $color-blanco;
+
+    border: 2px solid $color-borde;
+
+    padding: $espacio-25;
+
+    border-radius: $radio-general;
+
+    box-shadow: 0 4px 12px $primario-08;
+}
+
+
+.form-label {
+    color: $color-primario-oscuro;
+
+    font-weight: 700;
+}
+
+
+.form-control {
+    border: 2px solid $color-borde-formulario;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+
+
+    &:hover {
+        border-color: $color-borde;
+    }
+
+
+    &:focus {
+        border-color: $color-acento;
+
+        background-color: $color-modal-footer;
+
+        box-shadow: 0 0 0 4px $acento-18;
+    }
+}
+
+
+textarea.form-control {
+    resize: vertical;
+}
+
+// MOBILE - CAROUSEL
+
+@media (max-width: $breakpoint-mobile) {
+
+    .carousel-portfolio {
+
+        .carousel-caption {
+            left: 8%;
+            right: 8%;
+            bottom: $espacio-15;
+
+            padding: $espacio-10;
+
+
+            h3 {
+                margin-bottom: 0;
+
+                font-size: 18px;
+            }
+
+
+            p {
+                display: none;
+            }
+        }
+    }
+}

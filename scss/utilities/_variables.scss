@@ -1,0 +1,95 @@
+// COLORES PRINCIPALES
+
+$color-fondo: #f0fdfa;
+$color-texto: #1f2937;
+
+$color-primario: #0f766e;
+$color-primario-oscuro: #115e59;
+
+$color-acento: #0ea5e9;
+$color-acento-claro: #bae6fd;
+
+$color-blanco: #ffffff;
+$color-superficie-suave: #ccfbf1;
+
+$color-borde: #99f6e4;
+$color-borde-formulario: #d1fae5;
+
+$color-texto-secundario: #4b5563;
+$color-gris-foco: #6b7280;
+
+$color-modal-footer: #f8fffe;
+
+// TRANSPARENCIAS
+
+$blanco-10: rgba(255, 255, 255, 0.10);
+$blanco-12: rgba(255, 255, 255, 0.12);
+$blanco-60: rgba(255, 255, 255, 0.60);
+
+$primario-08: rgba(15, 118, 110, 0.08);
+$primario-10: rgba(15, 118, 110, 0.10);
+$primario-14: rgba(15, 118, 110, 0.14);
+$primario-18: rgba(15, 118, 110, 0.18);
+$primario-20: rgba(15, 118, 110, 0.20);
+$primario-22: rgba(15, 118, 110, 0.22);
+$primario-28: rgba(15, 118, 110, 0.28);
+$primario-82: rgba(15, 118, 110, 0.82);
+
+$acento-15: rgba(14, 165, 233, 0.15);
+$acento-18: rgba(14, 165, 233, 0.18);
+$acento-25: rgba(14, 165, 233, 0.25);
+$acento-30: rgba(14, 165, 233, 0.30);
+$acento-35: rgba(14, 165, 233, 0.35);
+$acento-45: rgba(14, 165, 233, 0.45);
+
+$gris-25: rgba(107, 114, 128, 0.25);
+
+// TIPOGRAFÍA
+
+$fuente-principal: "Trebuchet MS", Arial, sans-serif;
+
+$tamano-h1: 2rem;
+$tamano-destacado: 1.5rem;
+$tamano-contacto: 1.1875rem;
+$tamano-caption: 0.875rem;
+
+// DIMENSIONES
+
+$ancho-maximo: 1200px;
+
+$radio-pequeno: 3px;
+$radio-nav: 6px;
+$radio-articulo: 8px;
+$radio-general: 10px;
+$radio-carousel: 12px;
+
+// ESPACIADOS
+
+$espacio-4: 4px;
+$espacio-8: 8px;
+$espacio-10: 10px;
+$espacio-12: 12px;
+$espacio-15: 15px;
+$espacio-20: 20px;
+$espacio-24: 24px;
+$espacio-25: 25px;
+$espacio-30: 30px;
+
+// OPERADOR DE SASS
+
+$espacio-40: $espacio-20 * 2;
+
+// TRANSICIONES
+
+$duracion-rapida: 0.2s;
+$duracion-media: 0.3s;
+$duracion-lenta: 0.6s;
+
+$easing-suave: ease;
+
+// BREAKPOINTS
+
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-navbar: 991.98px;
+$breakpoint-desktop: 1024px;
